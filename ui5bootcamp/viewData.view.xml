@@ -1,0 +1,48 @@
+<core:View
+	controllerName="ui5bootcamp.viewData"
+	xmlns="sap.suite.ui.commons"
+	xmlns:m="sap.m"
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:layout="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<m:Page 
+		title="View Usage"
+		showNavButton="true"
+		navButtonPress="navBack">
+			
+		<m:FlexBox
+			justifyContent="Center"
+			height="80%"
+			width="80%"
+			direction="Column"> 
+			
+			<ChartContainer
+				id="idChartContainer"
+				showFullScreen="true"
+				showPersonalization="false"
+				autoAdjustHeight="false"
+				showLegend="false"
+				showLegendButton="true"
+				width="100%">
+		
+				<content>
+					<ChartContainerContent
+					   	icon = "sap-icon://bubble-chart" 
+						title = "Bubble Chart"> 
+						<content>
+							<viz:VizFrame 
+								id="idoVizFrame" 
+								width="400px"
+								uiConfig="{applicationSet:'fiori'}"> 
+							</viz:VizFrame>
+						</content>
+					</ChartContainerContent>		
+				</content>	
+			</ChartContainer>
+		</m:FlexBox>	
+	
+	</m:Page>
+</core:View>

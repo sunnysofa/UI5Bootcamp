@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.ui.core, sap.m, sap.ui.layout, sap.ui.commons, sap.makit"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-xx-bindingSyntax="complex">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+				sap.ui.localResources("ui5bootcamp");
+				var app = new sap.m.App({initialPage:"idlogin"});
+				var loginPage = sap.ui.view({id:"idlogin", viewName:"ui5bootcamp.login1", type:sap.ui.core.mvc.ViewType.XML});
+				var homePage = sap.ui.view({id:"idhomePage", viewName:"ui5bootcamp.homePage", type:sap.ui.core.mvc.ViewType.XML});
+				var addData = sap.ui.view({id:"idaddData", viewName:"ui5bootcamp.addData", type:sap.ui.core.mvc.ViewType.XML});
+				var viewData = sap.ui.view({id:"idviewData", viewName:"ui5bootcamp.viewData", type:sap.ui.core.mvc.ViewType.XML});
+				var editData = sap.ui.view({id:"ideditData", viewName:"ui5bootcamp.editData", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(loginPage).addPage(homePage).addPage(addData).addPage(viewData).addPage(editData);
+				//app.placeAt("content");
+				
+				new sap.m.Shell({
+					app: app
+				}).placeAt("content");
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

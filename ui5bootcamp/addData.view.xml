@@ -1,0 +1,54 @@
+<core:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:u="sap.ui.unified"
+	controllerName="ui5bootcamp.addData" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<Page 
+		title="Add/Edit Usage Data"
+		showNavButton="true"
+		navButtonPress="navBack">
+		<content>
+			<FlexBox
+				alignItems="Center">
+				<items>
+					<Table 
+					  	id="iddataTable" 
+					  	items="{path:'/usageData'}"
+					  	width="70%">
+		                <headerToolbar>
+		                    <Toolbar>
+		                        <Label text="Current Electricity Usage"></Label>
+		                        <Button 
+		                        	icon="sap-icon://edit" 
+		                        	text="Add Data" 
+		                        	press="buttonAddData"/>	
+		                    </Toolbar>		
+		                </headerToolbar>
+		                <columns>
+		                    <Column>
+		                        <Label text="Date" />
+		                    </Column>
+		                    <Column>
+		                        <Label text="Usage (kWh)" />
+		                    </Column>
+		                </columns>
+		                <items>
+		                    <ColumnListItem>
+		                        <cells>
+		                            <ObjectIdentifier text="{DATE}" />
+		                        </cells>
+		                        <Text text="{USAGE}"></Text>
+		                    </ColumnListItem>
+		                </items>
+	          		</Table>   
+	          		<u:Calendar
+					id="calendar"
+					select="handleCalendarSelect" />  
+            	</items>
+			</FlexBox>
+		</content>
+	</Page>
+</core:View>

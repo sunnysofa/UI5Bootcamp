@@ -1,0 +1,35 @@
+<core:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	controllerName="ui5bootcamp.homePage" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<Page title="Launchpad"
+		showNavButton="true"
+		navButtonPress="navBack">
+		<TileContainer
+			id="tileContainer">
+			<tiles>
+				<StandardTile
+					id="add"
+					icon= "sap-icon://edit"
+			 		title= "Add/Edit Usage Data"
+			 		press= "pressAddData"
+					/>
+				<StandardTile
+					id="view"
+					icon= "sap-icon://area-chart"
+			 		title= "View Usage"
+			 		press= "pressViewData"
+					/>
+				<StandardTile
+					id="edit"
+					icon= "sap-icon://message-information"
+			 		title= "Common Appliance Info"
+			 		press= "pressInfo"
+					/>
+			</tiles>
+		</TileContainer>
+	</Page>
+</core:View>

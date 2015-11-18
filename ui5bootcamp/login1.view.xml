@@ -1,0 +1,29 @@
+<core:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	controllerName="ui5bootcamp.login1" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<Page title="Login">
+		<content>
+			<FlexBox
+				alignItems="Center"
+				justifyContent="Center"
+				direction="Column"
+				height="80%">
+					<Input
+						id="usernameInput"
+						type="Text"
+						placeholder="username">
+					</Input>
+					<Input
+						id="passwordInput"
+						type="Password"
+						placeholder="password">
+					</Input>
+					<Button text="Login" press="onSubmit" />
+			</FlexBox>
+		</content>
+	</Page>
+</core:View>

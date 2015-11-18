@@ -1,0 +1,49 @@
+<core:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	controllerName="ui5bootcamp.editData" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<Page title="Wattage of Common Household Appliances"
+		showNavButton="true"
+		navButtonPress="navBack">
+		
+		<content>
+			<FlexBox
+				alignItems="Center">
+				<items>
+					<Table 
+					  	id="iddataTable" 
+					  	items="{path:'/usageData'}"
+					  	width="60%">
+		                <headerToolbar>
+		                    <Toolbar>
+		                        <Label text="Common Appliances and Energy Consumption"></Label>
+		                        <SearchField 
+		                        	width="20%" 
+		                        	placeholder="search"/>	
+		                    </Toolbar>		
+		                </headerToolbar>
+		                <columns>
+		                    <Column>
+		                        <Label text="Appliance" />
+		                    </Column>
+		                    <Column>
+		                        <Label text="Wattage (per hour)" />
+		                    </Column>
+		                </columns>
+		                <items>
+		                    <ColumnListItem>
+		                        <cells>
+		                            <ObjectIdentifier text="{Appliance}" />
+		                        </cells>
+		                        <Text text="{Wattage}"></Text>
+		                    </ColumnListItem>
+		                </items>
+            		</Table> 
+	            </items>
+            </FlexBox>     	
+		</content>
+	</Page>
+</core:View>
